@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Portfolio custom colors
+				'portfolio': {
+					'accent': '#3AEBB0',
+					'dark': '#0A0A0A',
+					'dark-secondary': '#121212',
+					'light': '#F5F5F7',
+					'gray': '#888888',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,12 +93,56 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'typing': {
+					'0%': {
+						width: '0%',
+						visibility: 'hidden'
+					},
+					'100%': {
+						width: '100%'
+					}
+				},
+				'blink': {
+					'50%': {
+						borderColor: 'transparent'
+					},
+					'100%': {
+						borderColor: 'white'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'cursor': 'blink 1s infinite',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.7s ease-out',
+			},
+			fontFamily: {
+				'sans': ['Inter', 'sans-serif'],
+				'mono': ['Space Mono', 'monospace'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
